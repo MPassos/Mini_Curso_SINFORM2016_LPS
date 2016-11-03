@@ -1,0 +1,25 @@
+
+
+SoUrCe RooT Hello "../features/Hello/Main.jak";/**
+ * TODO description
+ */
+abstract class Main$$Hello {
+	public void print(){
+		System.out.print("Hello");
+	}
+	
+	public static void main(String args[]){
+		new Main().print();
+	}
+
+}
+
+SoUrCe  World "../features/World/Main.jak";/**
+ * TODO description
+ */
+public class Main extends  Main$$Hello  {
+	public void print(){
+		Super().print();
+		System.out.print(" world!");
+	}
+}

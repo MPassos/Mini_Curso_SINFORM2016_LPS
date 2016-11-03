@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="ContaBancaria">
+				<description>
+					
+				</description>
+				<feature mandatory="true" name="Saldo">
+					<description>
+						
+					</description>
+				</feature>
+				<feature mandatory="true" name="Saque">
+					<description>
+						
+					</description>
+				</feature>
+				<feature mandatory="true" name="Deposito">
+					<description>
+						
+					</description>
+				</feature>
+				<feature name="Limite">
+					<description>
+						
+					</description>
+				</feature>
+				<feature name="Transferencia">
+					<description>
+						
+					</description>
+				</feature>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
