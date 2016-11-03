@@ -1,4 +1,5 @@
-# Mini_Curso_SINFORM2016_LPS
-Material utilizado durante o minicurso do SINFORM 2016
+# Mini Curso SINFORM 2016 - Linha de Produto de Software
 
-TBD
+Nesta página estão disponívies os slides utilizados no minicurso, exemplo feitos em sala e material de apoio.
+
+
