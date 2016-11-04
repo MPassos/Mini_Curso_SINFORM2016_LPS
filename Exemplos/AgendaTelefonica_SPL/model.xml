@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="AgendaTelefonica_SPL">
+				<description>
+					
+				</description>
+				<and abstract="true" mandatory="true" name="Contato">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Adcionar">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="Alterar">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="Excluir">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="Pesquisa">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Visualizar">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+				<or abstract="true" name="Arquivo">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Importar">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Exportar">
+						<description>
+							
+						</description>
+					</feature>
+				</or>
+				<and abstract="true" name="Ajuda">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Sobre">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
