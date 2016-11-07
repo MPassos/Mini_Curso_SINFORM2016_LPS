@@ -9,11 +9,11 @@ public class Main {
 		//#endif
 		
 		//#if Beautiful
-//@		System.out.print(" beautiful");
+		System.out.print(" beautiful");
 		//#endif
 		
 		//#if Wonderful
-		System.out.print(" wonderful");
+//@		System.out.print(" wonderful");
 		//#endif
 		
 		//#if World
