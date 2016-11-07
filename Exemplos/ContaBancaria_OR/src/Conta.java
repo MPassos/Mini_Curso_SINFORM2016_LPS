@@ -7,26 +7,32 @@ public class Conta {
 	private String titular;
 	
 	//#if Limite
-//@	private float limite;
+	private float limite;
 	//#endif
 	
 	//#if !Limite
-	public Conta(float saldo, int num_conta, String titular){
-		this.saldo = saldo;
-		this.num_conta = num_conta;
-		this.titular = titular;
-	}
+//@	public Conta(float saldo, int num_conta, String titular){
+//@		this.saldo = saldo;
+//@		this.num_conta = num_conta;
+//@		this.titular = titular;
+//@	}
 	//#endif
 	
 	//#if Limite
-//@		public Conta(float saldo, int num_conta, String titular,float limite){
-//@			this.saldo = saldo;
-//@			this.num_conta = num_conta;
-//@			this.titular = titular;
-//@			this.limite = limite;
-//@		}
+		public Conta(float saldo, int num_conta, String titular,float limite){
+			this.saldo = saldo;
+			this.num_conta = num_conta;
+			this.titular = titular;
+			this.limite = limite;
+		}
 	//#endif
 		
+	public Conta(){
+		this.saldo = 0;
+		this.num_conta = 0;
+		this.titular = "";
+	}
+	
 	public float getSaldo() {
 		return saldo;
 	}
@@ -52,14 +58,14 @@ public class Conta {
 	}
 	
 	//#if Limite
-//@	public float getLimite() {
-//@		return limite;
-//@	}
-//@
-//@	public void setLimite(float limite) {
-//@		this.limite = limite;
-//@		System.out.println("Limite:"+ this.limite);
-//@	}
+	public float getLimite() {
+		return limite;
+	}
+
+	public void setLimite(float limite) {
+		this.limite = limite;
+		System.out.println("Limite:"+ this.limite);
+	}
 	//#endif
 	
 	public void saque(float valor){
@@ -86,7 +92,7 @@ public class Conta {
 		if(valor < this.saldo){
 			destino.deposito(valor);
 			this.saldo -= valor;
-			System.out.println("Transfer?ncia Realizada");
+			System.out.println("Transferencia Realizada");
 			System.out.println("Saldo atual:"+this.getSaldo());
 		}else{
 			System.out.println("Saldo insuficiente");
