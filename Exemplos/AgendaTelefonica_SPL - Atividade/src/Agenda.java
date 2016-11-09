@@ -25,27 +25,27 @@ public class Agenda {
 	}
 
 	// #if Por_Nome
-	// @ private Contato encontraContato(Contato contato) {
-	// @ for (int i = 0; i < contatos.size(); i++) {
-	// @ if (contatos.get(i).getNome().equals(contato.getNome())) {
-	// @ return contatos.get(i);
-	// @ }
-	// @ }
-	// @ System.out.println("Contato nao encontrado");
-	// @ return null;
-	// @ }
+	 private Contato encontraContato(Contato contato) {
+	 for (int i = 0; i < contatos.size(); i++) {
+	 if (contatos.get(i).getNome().equals(contato.getNome())) {
+	 return contatos.get(i);
+	 }
+	 }
+	 System.out.println("Contato nao encontrado");
+	 return null;
+	 }
 	// #endif
 
 	// #if Por_Numero
-	private Contato encontraContato(Contato contato) {
-		for (int i = 0; i < contatos.size(); i++) {
-			if (contatos.get(i).getNumero().equals(contato.getNumero())) {
-				return contatos.get(i);
-			}
-		}
-		System.out.println("Contato nao encontrado");
-		return null;
-	}
+//@	private Contato encontraContato(Contato contato) {
+//@		for (int i = 0; i < contatos.size(); i++) {
+//@			if (contatos.get(i).getNumero().equals(contato.getNumero())) {
+//@				return contatos.get(i);
+//@			}
+//@		}
+//@		System.out.println("Contato nao encontrado");
+//@		return null;
+//@	}
 	// #endif
 
 	public void visualizaAgenda() {
@@ -87,14 +87,14 @@ public class Agenda {
 	// #endif
 
 	// #if Excluir
-	public void excluiContato(Contato contato) {
-		Contato exc = encontraContato(contato);
-
-		if (exc != null) {
-			this.contatos.remove(exc);
-			return;
-		}
-	}
+//@	public void excluiContato(Contato contato) {
+//@		Contato exc = encontraContato(contato);
+//@
+//@		if (exc != null) {
+//@			this.contatos.remove(exc);
+//@			return;
+//@		}
+//@	}
 	// #endif
 
 	// #if Por_Numero || Por_Nome
@@ -109,14 +109,14 @@ public class Agenda {
 	// #endif
 
 	// #if Manual
-	public void nonoDigito(String digito, Contato contato) {
-		Contato dig = encontraContato(contato);
-
-		if (dig != null) {
-			dig.setNumero(digito + dig.getNumero());
-			System.out.print("Numero alterado:" + dig.getNumero());
-		}
-	}
+//@	public void nonoDigito(String digito, Contato contato) {
+//@		Contato dig = encontraContato(contato);
+//@
+//@		if (dig != null) {
+//@			dig.setNumero(digito + dig.getNumero());
+//@			System.out.print("Numero alterado:" + dig.getNumero());
+//@		}
+//@	}
 	// #endif
 
 	// #if Automatico

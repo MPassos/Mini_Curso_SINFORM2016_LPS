@@ -88,7 +88,29 @@
 				</alt>
 			</and>
 		</struct>
-		<constraints/>
+		<constraints>
+			<rule>
+				<imp>
+					<disj>
+						<var>Alterar</var>
+						<var>Excluir</var>
+					</disj>
+					<disj>
+						<var>Por_Nome</var>
+						<var>Por_Numero</var>
+					</disj>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Manual</var>
+					<disj>
+						<var>Por_Nome</var>
+						<var>Por_Numero</var>
+					</disj>
+				</imp>
+			</rule>
+		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>

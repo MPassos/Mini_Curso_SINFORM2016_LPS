@@ -23,7 +23,7 @@ public class Agenda_Main {
 			// #endif
 
 			// #if Excluir
-			System.out.println("3 - EXCLUIR");
+//@			System.out.println("3 - EXCLUIR");
 			// #endif
 
 			// #if Por_Nome || Por_Numero
@@ -31,7 +31,7 @@ public class Agenda_Main {
 			// #endif
 
 			// #if Manual || Automatico
-			System.out.println("5 - ADCIONAR NONO DIGITO");
+//@			System.out.println("5 - ADCIONAR NONO DIGITO");
 			// #endif
 
 			System.out.println("6 - VER AGENDA");
@@ -69,13 +69,13 @@ public class Agenda_Main {
 			case 2:
 				aux = new Contato();
 				// #if Por_Nome
-				// @ System.out.print("Digite um nome para pesquisa:");
-				// @ aux.setNome(teclado.next());
+				 System.out.print("Digite um nome para pesquisa:");
+				 aux.setNome(teclado.next());
 				// #endif
 
 				// #if Por_Numero
-				System.out.print("Digite um numero para pesquisa:");
-				aux.setNumero(teclado.next());
+//@				System.out.print("Digite um numero para pesquisa:");
+//@				aux.setNumero(teclado.next());
 				// #endif
 
 				ag.alteraContato(aux);
@@ -83,67 +83,69 @@ public class Agenda_Main {
 			// #endif
 
 			// #if Excluir
-			case 3:
-				aux = new Contato();
+//@			case 3:
+//@				aux = new Contato();
 				// #if Por_Nome
 				// @ System.out.print("Digite um nome para pesquisa:");
 				// @ aux.setNome(teclado.next());
 				// #endif
-
+//@
 				// #if Por_Numero
-				System.out.print("Digite um numero para pesquisa:");
-				aux.setNumero(teclado.next());
+//@				System.out.print("Digite um numero para pesquisa:");
+//@				aux.setNumero(teclado.next());
 				// #endif
-
-				ag.excluiContato(aux);
-				break;
+//@
+//@				ag.excluiContato(aux);
+//@				break;
 			// #endif
 
 			// #if Por_Nome
-			// @ case 4:
-			// @ aux = new Contato();
-			// @ System.out.print("Digite um nome para pesquisa:");
-			// @ aux.setNome(teclado.next());
-			// @ ag.pesquisaContato(aux);
-			// @ break;
+			 case 4:
+			 aux = new Contato();
+			 System.out.print("Digite um nome para pesquisa:");
+			 aux.setNome(teclado.next());
+			 ag.pesquisaContato(aux);
+			 break;
 			// #endif
 
 			// #if Por_Numero
-			case 4:
-				aux = new Contato();
-				System.out.print("Digite um numero para pesquisa");
-				aux.setNumero(teclado.next());
-				ag.pesquisaContato(aux);
-				break;
+//@			case 4:
+//@				aux = new Contato();
+//@				System.out.print("Digite um numero para pesquisa");
+//@				aux.setNumero(teclado.next());
+//@				ag.pesquisaContato(aux);
+//@				break;
 			// #endif
 
-			case 5:
-				aux = new Contato();
-				//#if Manual
-				
+			// #if Manual || Automatico
+//@			case 5:
+//@				aux = new Contato();
+				// #if Manual
+//@
 				// #if Por_Nome
 				// @ System.out.print("Digite um nome para pesquisa:");
 				// @ aux.setNome(teclado.next());
 				// #endif
-
+//@
 				// #if Por_Numero
-				System.out.print("Digite um numero para pesquisa:");
-				aux.setNumero(teclado.next());
+//@				System.out.print("Digite um numero para pesquisa:");
+//@				aux.setNumero(teclado.next());
 				// #endif
-				
-				//#endif
-				
-				System.out.print("Insira o digito a ser adcionado");
-				String digito = teclado.next();
-				
-				//#if Manual
-				ag.nonoDigito(digito, aux);
-				//#endif
-				
-				//#if Automatico
-//@				ag.nonoDigito(digito);
-				//#endif
-				break;
+//@
+				// #endif
+//@
+//@				System.out.print("Insira o digito a ser adcionado");
+//@				String digito = teclado.next();
+//@
+				// #if Manual
+//@				ag.nonoDigito(digito, aux);
+				// #endif
+//@
+				// #if Automatico
+				// @ ag.nonoDigito(digito);
+				// #endif
+//@				break;
+			// #endif
 			case 6:
 				ag.visualizaAgenda();
 				break;
