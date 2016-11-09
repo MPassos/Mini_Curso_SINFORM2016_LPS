@@ -24,15 +24,29 @@ public class Agenda {
 		});
 	}
 
+	// #if Por_Nome
+	// @ private Contato encontraContato(Contato contato) {
+	// @ for (int i = 0; i < contatos.size(); i++) {
+	// @ if (contatos.get(i).getNome().equals(contato.getNome())) {
+	// @ return contatos.get(i);
+	// @ }
+	// @ }
+	// @ System.out.println("Contato nao encontrado");
+	// @ return null;
+	// @ }
+	// #endif
+
+	// #if Por_Numero
 	private Contato encontraContato(Contato contato) {
 		for (int i = 0; i < contatos.size(); i++) {
-			if (contatos.get(i).getNome().equals(contato.getNome())) {
+			if (contatos.get(i).getNumero().equals(contato.getNumero())) {
 				return contatos.get(i);
 			}
 		}
-		System.out.println("Contato n?o encontrado");
+		System.out.println("Contato nao encontrado");
 		return null;
 	}
+	// #endif
 
 	public void visualizaAgenda() {
 		if (contatos.size() == 0) {
@@ -44,17 +58,17 @@ public class Agenda {
 		}
 		return;
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		String aux = "";
-		for(int i = 0; i<contatos.size();i++){
-			aux+= contatos.get(i).getNome()+"#"+contatos.get(i).getSobrenome()+"#"+
-		contatos.get(i).getDdd()+"#"+contatos.get(i).getNumero()+"\n";
+		for (int i = 0; i < contatos.size(); i++) {
+			aux += contatos.get(i).getNome() + "#" + contatos.get(i).getSobrenome() + "#" + contatos.get(i).getDdd()
+					+ "#" + contatos.get(i).getNumero() + "\n";
 		}
 		return aux;
 	}
-	
-	//#if Alterar
+
+	// #if Alterar
 	public void alteraContato(Contato contato) {
 		Contato alt = encontraContato(contato);
 
@@ -70,30 +84,47 @@ public class Agenda {
 			return;
 		}
 	}
-	//#endif
-	
-	//#if Excluir
-	public void excluiContato(Contato contato){
+	// #endif
+
+	// #if Excluir
+	public void excluiContato(Contato contato) {
 		Contato exc = encontraContato(contato);
-		
-		if(exc != null){
+
+		if (exc != null) {
 			this.contatos.remove(exc);
 			return;
 		}
 	}
-	//#endif
-	
-	//#if Pesquisa
-	public void pesquisaContato(Contato contato){
+	// #endif
+
+	// #if Por_Numero || Por_Nome
+	public void pesquisaContato(Contato contato) {
 		Contato pesq = encontraContato(contato);
-		
+
 		if (pesq != null) {
 			System.out.print(pesq.toString());
 		}
-		
-		System.out.print(pesq.toString());
 		return;
 	}
-	//#endif
-	
+	// #endif
+
+	// #if Manual
+	public void nonoDigito(String digito, Contato contato) {
+		Contato dig = encontraContato(contato);
+
+		if (dig != null) {
+			dig.setNumero(digito + dig.getNumero());
+			System.out.print("Numero alterado:" + dig.getNumero());
+		}
+	}
+	// #endif
+
+	// #if Automatico
+	// @ public void nonoDigito(String digito){
+	// @ for(int i = 0; i< contatos.size(); i++){
+	// @ contatos.get(i).setNumero(digito+contatos.get(i).getNumero());
+	// @ }
+	// @
+	// @ }
+	// #endif
 }

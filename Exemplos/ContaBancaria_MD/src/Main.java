@@ -33,14 +33,17 @@ public class Main {
 			switch (op) {
 			case 'C':
 				System.out.print("Insira o nome do titular: ");
-				c1.setTitular(teclado.next());
+				String titular = teclado.next();
 				System.out.print("Insira o numero da conta: ");
-				c1.setNum_conta(teclado.nextInt());
+				int num = teclado.nextInt();
 				System.out.print("Insira o saldo da conta:");
-				c1.setSaldo(teclado.nextFloat());
+				float saldo = teclado.nextFloat();
 				//#if Ver_Limite || Definir_Limite
 				System.out.print("Insira o limite da conta:");
-				c1.setLimite(teclado.nextFloat());
+				float limite = teclado.nextFloat();
+				c1 = new Conta(saldo, num, titular, limite);
+				//#else
+//@				c1 = new Conta(saldo, num, titular);
 				// #endif
 				break;
 			case 'V':

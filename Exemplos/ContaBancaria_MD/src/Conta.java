@@ -106,11 +106,11 @@ public class Conta {
 	//#if Ver_Dados
 	public String toString(){
 		String aux = "";
-		aux += "Titular:" + this.getTitular();
-		aux += "\nNumero da conta:"+ this.getNum_conta();
-		aux += "\nSaldo:" + this.getSaldo();
+		aux += "Titular:" + this.titular;
+		aux += "\nNumero da conta:"+ this.num_conta;
+		aux += "\nSaldo:" + this.saldo;
 		//#if Ver_Limite || Definir_Limite
-		aux += "\nLimite:"+this.getLimite()+"\n";
+		aux += "\nLimite:"+this.limite+"\n";
 		//#endif
 		return aux;
 	}
